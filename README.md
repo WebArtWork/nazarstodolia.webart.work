@@ -18,3 +18,6 @@ Live site: https://nazarstodolia.webart.work
 
 ## Notes
 The page explicitly flags several details as unconfirmed: the exact room count and categories, whether Wi-Fi is free or available in all rooms and the conference hall, the terms of the parking area (free, capacity, security), the conference hall's capacity and pricing, and the hotel's email, official website, Instagram, and working hours.
+
+## Forms
+Live forms posting to HotelOS (`kp-nazarstodolia`): `stay-request` (after the rooms section) and `conference-request` (after the conference-hall section).

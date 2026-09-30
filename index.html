@@ -75,6 +75,8 @@
     footer{background:#221b16;color:#d8d1c6;padding:60px 0 95px}.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:35px}.footer-brand strong{font:600 1.4rem var(--serif);letter-spacing:.1em;color:#fff}
     .footer-brand small{display:block;color:#9a9184;margin-top:6px}.footer-col b{display:block;color:#fff;margin-bottom:10px}.footer-col a{display:block;color:#b3aa9d;margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:20px;display:flex;justify-content:space-between;color:#8f867a;font-size:.76rem}.mobile-sticky{display:none}
+    .request{background:var(--white)}.request.alt{background:var(--beige)}.request-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:70px;align-items:start}.request-phone{display:inline-block;margin-top:20px;font:700 clamp(1.5rem,3vw,2.2rem) var(--serif);color:var(--forest)}.request-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px;padding:36px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 45px rgba(60,42,31,.08)}.request:not(.alt) .request-form{background:var(--cream)}.field{display:grid;gap:7px;align-content:start;min-width:0;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.field.full{grid-column:1/-1}.field small{font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}.field input,.field select,.field textarea{width:100%;max-width:100%;min-width:0;min-height:52px;padding:12px 16px;border:1px solid rgba(43,42,40,.24);border-radius:10px;background:#fff;color:var(--graphite);font-size:1rem;font-weight:400;letter-spacing:0;text-transform:none}.field textarea{min-height:110px;resize:vertical}.field [aria-invalid=true]{border-color:var(--burgundy);box-shadow:0 0 0 1px var(--burgundy)}[data-error-for]{font-weight:600;letter-spacing:0;text-transform:none;color:var(--burgundy)}[data-error-for]:empty{display:none}.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.request-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}.request-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.request-note{flex:1;min-width:200px;margin:0;font-size:.8rem;color:var(--muted)}[data-status]{grid-column:1/-1;margin:0;padding:14px 18px;border-left:4px solid var(--forest);border-radius:10px;background:#e7eee7;font-size:.95rem}[data-status]:empty{display:none}[data-status][data-state=error]{border-color:var(--burgundy);background:#f5e4e2}[data-status] a{font-weight:800;text-decoration:underline}
+    @media(max-width:960px){.request-grid{grid-template-columns:minmax(0,1fr);gap:34px}}@media(max-width:600px){.request-form{grid-template-columns:minmax(0,1fr);padding:22px 16px}}
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,.8,.3,1),transform .9s cubic-bezier(.16,.8,.3,1)}.reveal.visible{opacity:1;transform:none}.reveal-item{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,.8,.3,1),transform .8s cubic-bezier(.16,.8,.3,1)}.reveal-group.visible .reveal-item{opacity:1;transform:none}.reveal-group.visible .reveal-item:nth-child(1){transition-delay:0s}.reveal-group.visible .reveal-item:nth-child(2){transition-delay:.09s}.reveal-group.visible .reveal-item:nth-child(3){transition-delay:.18s}.reveal-group.visible .reveal-item:nth-child(4){transition-delay:.27s}.reveal-group.visible .reveal-item:nth-child(5){transition-delay:.36s}.reveal-group.visible .reveal-item:nth-child(6){transition-delay:.45s}.reveal-group.visible .reveal-item:nth-child(7){transition-delay:.54s}.reveal-group.visible .reveal-item:nth-child(8){transition-delay:.63s}
     .feature-media{overflow:hidden}.feature-media img,.conf-media img,.gallery figure img{transition:transform 1.1s cubic-bezier(.16,.8,.3,1)}.feature-media img:hover,.conf-media img:hover,.gallery figure img:hover{transform:scale(1.045)}
     @media(prefers-reduced-motion:reduce){.reveal,.reveal-item{opacity:1;transform:none;transition:none}.hero-media>video{transform:none!important}.feature-media img,.conf-media img,.gallery figure img{transition:none}}
@@ -91,28 +93,30 @@
 </head>
 <body>
   <a class="skip" href="#top">До основного вмісту</a>
-  <header><div class="wrap header-in"><div class="brand-line"><a class="brand" href="#top"><strong>НАЗАР СТОДОЛЯ</strong><small>Готель · Зустрічі · Кам’янець-Подільський</small></a></div><div class="nav-row"><nav id="nav" class="nav" aria-label="Основна навігація"><a href="#about">Про готель</a><a href="#rooms">Номери</a><a href="#conference">Конференц-зал</a><a href="#amenities">Зручності</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти</a><a class="phone" href="tel:+380680104567">+38 068 010 45 67</a><a class="btn primary" href="#booking">Забронювати</a></nav></div></div></header>
+  <header><div class="wrap header-in"><div class="brand-line"><a class="brand" href="#top"><strong>НАЗАР СТОДОЛЯ</strong><small>Готель · Зустрічі · Кам’янець-Подільський</small></a></div><div class="nav-row"><nav id="nav" class="nav" aria-label="Основна навігація"><a href="#about">Про готель</a><a href="#rooms">Номери</a><a href="#conference">Конференц-зал</a><a href="#amenities">Зручності</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти</a><a class="phone" href="tel:+380680104567">+38 068 010 45 67</a><a class="btn primary" href="#stay-request">Забронювати</a></nav></div></div></header>
   <main id="top">
     <section class="hero"><div class="hero-copy"><div><span class="eyebrow">Проживання · Зустрічі · Робота</span><h1>Назар Стодоля</h1><h2>Місце для ночівлі. Простір для справ.</h2><p class="lead">Проживання у Кам’янці-Подільському з Wi-Fi, паркувальною зоною та конференц-залом.</p><div class="actions"><a class="btn primary" href="#rooms">Переглянути проживання</a><a class="btn" href="#conference">Запитати конференц-зал</a></div><div class="hero-address"><span>пров. Круглий, 26<br>Кам’янець-Подільський</span><a href="https://www.google.com/maps/search/?api=1&query=Назар+Стодоля,+провулок+Круглий+26,+Кам’янець-Подільський" target="_blank" rel="noopener">Показати на карті →</a></div></div></div><div class="hero-media"><video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero.jpg"><source src="hero-bg.mp4" type="video/mp4"></video></div></section>
     <section class="facts"><div class="wrap facts-grid"><div class="fact"><b>ПРОЖИВАННЯ</b><strong>Проживання</strong></div><div class="fact"><b>WI-FI</b><strong>Зазначено у джерелі</strong><small>Потрібно підтвердити</small></div><div class="fact"><b>ПАРКУВАННЯ</b><strong>Паркувальна зона</strong><small>Потрібно підтвердити</small></div><div class="fact"><b>ЗУСТРІЧІ</b><strong>Конференц-зал</strong></div></div></section>
     <section class="section" id="about"><div class="wrap about-grid"><div class="reveal"><span class="eyebrow">Проживання · Робота</span><h2>Коли поїздка означає не тільки відпочинок</h2><p class="lead">«Назар Стодоля» пропонує проживання у Кам’янці-Подільському. У джерельному описі також зазначені Wi-Fi, паркувальна зона та конференц-зал. Це дозволяє використовувати готель не тільки як туристичну зупинку, а й для робочих поїздок та групових зустрічей.</p><a class="btn primary" href="#selector">Обрати формат</a></div><div class="about-list reveal"><div>Проживання у місті</div><div>Wi-Fi, за джерельним описом</div><div>Паркувальна зона</div><div>Конференц-зал для зустрічей</div></div></div></section>
-    <section class="section selector" id="selector"><div class="wrap"><span class="eyebrow">Оберіть формат</span><h2>Що вам потрібно?</h2><div class="selector-grid reveal-group"><article class="select-card reveal-item"><span>01 · ПРОЖИВАННЯ</span><h3>Проживання</h3><p>Кімната на одну або кілька ночей.</p><a href="#rooms">Переглянути номери →</a></article><article class="select-card reveal-item"><span>02 · ЗУСТРІЧ</span><h3>Робоча зустріч</h3><p>Конференц-зал для групового формату.</p><a href="#conference">Запитати зал →</a></article><article class="select-card reveal-item"><span>03 · РАЗОМ</span><h3>Stay + Meeting</h3><p>Проживання та зустріч в одному місці.</p><a href="#booking">Підготувати запит →</a></article></div></div></section>
-    <section class="feature rooms" id="rooms"><div class="feature-media reveal"><img src="images/room.jpg" alt="Готельний номер, ілюстративне зображення"></div><div class="feature-copy"><div class="reveal"><span class="eyebrow">ПРОЖИВАННЯ</span><h2>Залишайтеся у Кам’янці</h2><p class="lead">Точна кількість номерів і категорії наразі не підтверджені. До отримання реальних даних сторінка показує лише загальний формат проживання.</p><div class="tag-list"><span>Проживання</span><span>Місто</span><span>Формат уточнюється</span></div><a class="btn primary" href="#booking">Перейти до бронювання</a><p class="fine">Категорії номерів, зручності та ціни уточнюйте безпосередньо під час бронювання.</p></div></div></section>
+    <section class="section selector" id="selector"><div class="wrap"><span class="eyebrow">Оберіть формат</span><h2>Що вам потрібно?</h2><div class="selector-grid reveal-group"><article class="select-card reveal-item"><span>01 · ПРОЖИВАННЯ</span><h3>Проживання</h3><p>Кімната на одну або кілька ночей.</p><a href="#rooms">Переглянути номери →</a></article><article class="select-card reveal-item"><span>02 · ЗУСТРІЧ</span><h3>Робоча зустріч</h3><p>Конференц-зал для групового формату.</p><a href="#conference">Запитати зал →</a></article><article class="select-card reveal-item"><span>03 · РАЗОМ</span><h3>Stay + Meeting</h3><p>Проживання та зустріч в одному місці.</p><a href="#conference-request">Підготувати запит →</a></article></div></div></section>
+    <section class="feature rooms" id="rooms"><div class="feature-media reveal"><img src="images/room.jpg" alt="Готельний номер, ілюстративне зображення"></div><div class="feature-copy"><div class="reveal"><span class="eyebrow">ПРОЖИВАННЯ</span><h2>Залишайтеся у Кам’янці</h2><p class="lead">Точна кількість номерів і категорії наразі не підтверджені. До отримання реальних даних сторінка показує лише загальний формат проживання.</p><div class="tag-list"><span>Проживання</span><span>Місто</span><span>Формат уточнюється</span></div><a class="btn primary" href="#stay-request">Перейти до бронювання</a><p class="fine">Категорії номерів, зручності та ціни уточнюйте безпосередньо під час бронювання.</p></div></div></section>
+    <section class="section request" id="stay-request"><div class="wrap request-grid"><div class="reveal"><span class="eyebrow">Запит на проживання</span><h2>Залиште номер, ми передзвонимо</h2><p class="lead">Вкажіть телефон і, за бажанням, дати поїздки. Ми зателефонуємо, щоб підтвердити доступність номера, умови та вартість.</p><a class="request-phone" href="tel:+380680104567">+38 068 010 45 67</a></div><form class="request-form reveal" data-hotelos data-form-name="Запит на проживання" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date"><span data-error-for="checkOut"></span></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="feature wifi" id="amenities"><div class="feature-copy"><div class="reveal"><span class="eyebrow">НА ЗВ’ЯЗКУ</span><h2>Залишайтеся на зв’язку</h2><p class="lead">У джерельному описі «Назар Стодоля» зазначений Wi-Fi. Це може бути корисно для робочих задач, відеодзвінків, планування подорожі та комунікації.</p><div class="tag-list"><span>Робота</span><span>Дзвінки</span><span>Подорож</span></div><p class="fine">Wi-Fi є джерельною інформацією, а не окремо підтвердженою зручністю. Наявність у всіх номерах, у конференц-залі та безкоштовність потрібно уточнити.</p></div></div><div class="feature-media reveal"><img src="images/hero.jpg" alt="Робота з ноутбуком у готелі, ілюстративне зображення"></div></section>
     <section class="feature parking"><div class="feature-media reveal"><img src="images/parking.jpg" alt="Паркувальна зона біля готелю, ілюстративне зображення"></div><div class="feature-copy"><div class="reveal"><span class="eyebrow">ПРИЇЗД</span><h2>Приїжджайте автомобілем</h2><p class="lead">У джерельному описі зазначена паркувальна зона. Це практична перевага і для туристичних, і для робочих поїздок.</p><div class="tag-list"><span>Паркувальна зона</span><span>Джерельна інформація</span></div><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Назар+Стодоля,+провулок+Круглий+26,+Кам’янець-Подільський" target="_blank" rel="noopener">Прокласти маршрут</a><p class="fine">Умови паркувальної зони (безкоштовність, місткість, охорона) уточнюйте безпосередньо. Джерело говорить про «паркувальну зону», а не про безкоштовний паркінг.</p></div></div></section>
-    <section class="section conference" id="conference"><div class="wrap conference-grid"><div class="conf-media reveal"><img src="images/conference.jpg" alt="Конференц-зал, ілюстративне зображення"></div><div class="reveal"><span class="eyebrow">ЗУСТРІЧІ</span><h2>Простір для зустрічі</h2><p class="lead">У джерельних даних підтверджена наявність конференц-залу. Це найпомітніший відмінний елемент «Назар Стодоля» серед невеликих об’єктів проживання.</p><a class="btn gold" href="#booking">Запитати конференц-зал</a><p class="fine" style="color:#eaded1">Місткість, планування, обладнання та вартість оренди залу уточнюйте безпосередньо під час запиту.</p></div></div></section>
+    <section class="section conference" id="conference"><div class="wrap conference-grid"><div class="conf-media reveal"><img src="images/conference.jpg" alt="Конференц-зал, ілюстративне зображення"></div><div class="reveal"><span class="eyebrow">ЗУСТРІЧІ</span><h2>Простір для зустрічі</h2><p class="lead">У джерельних даних підтверджена наявність конференц-залу. Це найпомітніший відмінний елемент «Назар Стодоля» серед невеликих об’єктів проживання.</p><a class="btn gold" href="#conference-request">Запитати конференц-зал</a><p class="fine" style="color:#eaded1">Місткість, планування, обладнання та вартість оренди залу уточнюйте безпосередньо під час запиту.</p></div></div></section>
+    <section class="section request alt" id="conference-request"><div class="wrap request-grid"><div class="reveal"><span class="eyebrow">Конференц-зал</span><h2>Заплануйте зустріч у «Назар Стодоля»</h2><p class="lead">Вкажіть дату та кількість учасників. Ми передзвонимо, щоб узгодити зал, формат і, за потреби, проживання.</p><a class="request-phone" href="tel:+380680104567">+38 068 010 45 67</a></div><form class="request-form reveal" data-hotelos data-form-name="Запит на конференц-зал" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Учасників<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field full">Дата<input name="date" type="date"></label><label class="field full">Формат і побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="section use-cases"><div class="wrap"><span class="eyebrow">Можливі сценарії</span><h2>Для яких зустрічей підходить зал</h2><p class="lead">Формат залу дозволяє розглянути кілька сценаріїв без заяв про вузьку спеціалізацію.</p><div class="case-grid reveal-group"><article class="case-card reveal-item"><b>Робоча зустріч / нарада</b><span>Зустріч команди чи організованої групи.</span></article><article class="case-card reveal-item"><b>Навчання / воркшоп</b><span>Навчальний або робочий сесійний формат.</span></article><article class="case-card reveal-item"><b>Презентація</b><span>Невелика презентація.</span></article></div></div></section>
-    <section class="section combo"><div class="wrap combo-grid"><div class="reveal"><span class="eyebrow">Для бізнесу</span><h2>Зустріч і проживання в одному місці</h2><p class="lead">Для команди, яка приїжджає до Кам’янця на тренінг, workshop, робочу зустріч чи короткий корпоративний виїзд, конференц-зал потенційно можна поєднати з проживанням.</p><a class="btn primary" href="#booking">Запитати групову пропозицію</a></div><div class="combo-card reveal"><b>Подорожуєте групою?</b><p>Наявність конференц-залу робить об’єкт потенційно цікавим і для організованих груп. Після підтвердження загальної місткості готелю можна розглядати групове розміщення, поки що ця цифра невідома.</p><a class="btn" href="#booking">Уточнити розміщення</a></div></div></section>
+    <section class="section combo"><div class="wrap combo-grid"><div class="reveal"><span class="eyebrow">Для бізнесу</span><h2>Зустріч і проживання в одному місці</h2><p class="lead">Для команди, яка приїжджає до Кам’янця на тренінг, workshop, робочу зустріч чи короткий корпоративний виїзд, конференц-зал потенційно можна поєднати з проживанням.</p><a class="btn primary" href="#conference-request">Запитати групову пропозицію</a></div><div class="combo-card reveal"><b>Подорожуєте групою?</b><p>Наявність конференц-залу робить об’єкт потенційно цікавим і для організованих груп. Після підтвердження загальної місткості готелю можна розглядати групове розміщення, поки що ця цифра невідома.</p><a class="btn" href="#stay-request">Уточнити розміщення</a></div></div></section>
     <section class="section"><div class="wrap"><span class="eyebrow">Ділова поїздка</span><h2>Робоча поїздка до Кам’янця</h2><p class="lead">Проживання, Wi-Fi, паркувальна зона та можливість зустрічі, цього достатньо для зручної ділової зупинки. Сторінка не називає «Назар Стодоля» офіційною категорією «бізнес-готель».</p><div class="day-grid reveal-group"><article class="day-step reveal-item"><b>Ранок</b><span>Почати день у готелі.</span></article><article class="day-step reveal-item"><b>День</b><span>Зустріч або робота у місті.</span></article><article class="day-step reveal-item"><b>Після обіду</b><span>Сесія в конференц-залі.</span></article><article class="day-step reveal-item"><b>Вечір</b><span>Відпочинок у номері.</span></article></div></div></section>
     <section class="section tourist"><div class="wrap reveal"><span class="eyebrow">Просто подорожуєте?</span><h2>А якщо ви просто подорожуєте?</h2><p class="lead">«Назар Стодоля» залишається місцем для проживання у Кам’янці-Подільському. Заселяйтеся та використовуйте готель як базу для власної подорожі.</p><a class="btn light" href="#rooms">Переглянути номери</a></div></section>
     <section class="section" id="gallery"><div class="wrap"><span class="eyebrow">Галерея</span><h2>Назар Стодоля в деталях</h2><div class="gallery reveal-group"><figure class="reveal-item"><img src="images/room.jpg" alt="Ілюстративний готельний номер" loading="lazy"></figure><figure class="reveal-item"><img src="images/conference.jpg" alt="Ілюстративний конференц-зал" loading="lazy"></figure><figure class="reveal-item"><img src="images/hero.jpg" alt="Ілюстративний вигляд готелю" loading="lazy"></figure><figure class="reveal-item"><img src="images/parking.jpg" alt="Ілюстративна паркувальна зона" loading="lazy"></figure></div><p class="gallery-note">Зображення ілюстративні. Актуальний вигляд номерів, конференц-залу, готелю та паркувальної зони уточнюйте безпосередньо.</p></div></section>
     <section class="section location" id="contacts"><div class="wrap location-grid"><div class="map-card reveal">
 <iframe src="https://www.google.com/maps?q=Назар+Стодоля,+провулок+Круглий+26,+Кам’янець-Подільський&output=embed" title="Карта: Назар Стодоля, пров. Круглий, 26, Кам’янець-Подільський" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><div class="contact-card"><span class="eyebrow">Контакти</span><h2 style="font:600 clamp(2.2rem,4vw,3.4rem)/1 var(--serif)">Назар Стодоля</h2><a class="big" href="tel:+380680104567">+38 068 010 45 67</a><dl><dt>Адреса</dt><dd>пров. Круглий, 26, Кам’янець-Подільський</dd><dt>Email / сайт / Instagram</dt><dd>Не підтверджено</dd><dt>Графік роботи</dt><dd>Актуальний статус наразі не підтверджено, зателефонуйте, щоб уточнити</dd></dl></div></div></section>
     <section class="section booking" id="booking"><div class="wrap"><span class="eyebrow">Запити</span><h2>Зв’яжіться з нами</h2><p class="lead">Щоб забронювати проживання або запитати конференц-зал, зателефонуйте безпосередньо, це найшвидший спосіб уточнити наявність і деталі.</p><div class="contact-card" style="max-width:520px;margin:44px auto 0;text-align:center"><span class="eyebrow">Телефон</span><a class="big" href="tel:+380680104567" style="text-align:center">+38 068 010 45 67</a><dl style="text-align:left"><dt>Адреса</dt><dd>пров. Круглий, 26, Кам’янець-Подільський</dd></dl><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Назар+Стодоля,+провулок+Круглий+26,+Кам’янець-Подільський" target="_blank" rel="noopener">Відкрити у Google Maps ↗</a></div></div></section>
-    <section class="final"><img src="images/conference.jpg" alt="Конференц-зал, ілюстративне зображення"><div><span class="eyebrow" style="color:#e3bd8a">Stay · Meet · Work</span><h2>Приїхали у Кам’янець у справах?</h2><p>Залишайтеся, працюйте та проводьте зустрічі в одному місці.</p><div class="actions"><a class="btn gold" href="#booking">Запитати проживання</a><a class="btn light" href="#booking">Запитати конференц-зал</a></div><small>+38 068 010 45 67</small></div></section>
+    <section class="final"><img src="images/conference.jpg" alt="Конференц-зал, ілюстративне зображення"><div><span class="eyebrow" style="color:#e3bd8a">Stay · Meet · Work</span><h2>Приїхали у Кам’янець у справах?</h2><p>Залишайтеся, працюйте та проводьте зустрічі в одному місці.</p><div class="actions"><a class="btn gold" href="#stay-request">Запитати проживання</a><a class="btn light" href="#conference-request">Запитати конференц-зал</a></div><small>+38 068 010 45 67</small></div></section>
   </main>
-  <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>НАЗАР СТОДОЛЯ</strong><small>Проживання · Зустрічі · Робота</small></div><div class="footer-col"><b>Проживання</b><a href="#rooms">Номери</a><a href="#booking">Бронювання</a></div><div class="footer-col"><b>Робота</b><a href="#conference">Конференц-зал</a><a href="#booking">Групові запити</a></div><div class="footer-col"><b>Інформація</b><a href="#amenities">Wi-Fi і паркування</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти й карта</a></div></div><div class="footer-bottom"><span>пров. Круглий, 26 · Кам’янець-Подільський</span><span>+38 068 010 45 67</span></div></div></footer>
-  <div class="mobile-sticky"><a href="tel:+380680104567">Зателефонувати</a><a href="#booking">Забронювати</a></div>
+  <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>НАЗАР СТОДОЛЯ</strong><small>Проживання · Зустрічі · Робота</small></div><div class="footer-col"><b>Проживання</b><a href="#rooms">Номери</a><a href="#stay-request">Бронювання</a></div><div class="footer-col"><b>Робота</b><a href="#conference">Конференц-зал</a><a href="#conference-request">Групові запити</a></div><div class="footer-col"><b>Інформація</b><a href="#amenities">Wi-Fi і паркування</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти й карта</a></div></div><div class="footer-bottom"><span>пров. Круглий, 26 · Кам’янець-Подільський</span><span>+38 068 010 45 67</span></div></div></footer>
+  <div class="mobile-sticky"><a href="tel:+380680104567">Зателефонувати</a><a href="#stay-request">Забронювати</a></div>
   <script>
     const observer=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal,.reveal-group').forEach(el=>observer.observe(el));
     const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -125,6 +129,153 @@
         addEventListener('scroll',()=>{const r=hero.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)heroVideo.style.transform=`translateY(${scrollY*.12}px)`},{passive:true});
       }
     }
+  </script>
+  <script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-nazarstodolia'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://nazarstodolia.webart.work/'; // from the site's CNAME
+const PHONE = '+38 068 010 45 67'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
   </script>
 </body>
 </html>
